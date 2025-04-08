@@ -1,0 +1,30 @@
+{
+  "name": "Ak-Waifu",
+  "description": "A cute Telegram Waifu Bot with anime personality, MongoDB memory, games, and MukeshAPI integration.",
+  "repository": "https://github.com/Akash8t2/Ak-Waifu",
+  "logo": "https://i.imgur.com/FYxRZ5N.png",
+  "keywords": ["telegram", "bot", "anime", "waifu", "chatbot", "mongodb"],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your bot token from BotFather",
+      "required": true
+    },
+    "MONGO_URL": {
+      "description": "Your MongoDB URI",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [],
+  "stack": "heroku-22"
+}
